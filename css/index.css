@@ -1,0 +1,109 @@
+body{
+	//background-color: #606060;
+}
+.layout{
+	width: 900px;
+	margin:0 auto;
+	//background-color: red;
+}
+/*顶部*/
+.top{
+	width:100%;
+	height:50px;
+	background-color: #17a2b8;
+	position: relative;
+}
+.themo{
+	height: 50px;
+	width: 500px;
+	margin-left: 200px;
+	position:absolute;
+	left:0;
+	text-align:center;
+	color: #fff;
+}
+.themo-ul{
+	list-style:none;
+}
+.themo-ul > li{
+	list-style:none;
+	line-height: 50px;
+	float: left;
+	margin-left: 20px;
+}
+.themo-ul li:nth-child(1) > span{
+	color: skyblue;
+}
+.themo-ul li:nth-child(2) > span{
+	color: #200000;
+}
+.themo-ul li:nth-child(3) > span{
+	color: #888888;
+}
+
+
+.user{
+	color: black;
+	position:absolute;
+	top: 5px;
+	right: 20px;
+}
+.user > .user-img{
+	border-radius: 25px;
+	width: 40px;
+	height:40px;
+	margin-left: 10px;
+}
+.user > button{
+	
+	margin-left: 30px;
+}
+/*头部*/
+.head{
+	width: 100%;
+	height: 60px;
+	
+}
+.head > div{
+	height: 30px;
+	position: relative;
+	top: 15px;
+}
+.head-nav > a {
+	font-size: 20px;
+	margin: 0 65px 0 65px;
+	text-decoration: none;
+}
+.main{
+	width: 100%;
+	height:300px;
+
+}
+.bottom{
+	margin-top: 10px;
+	height: 140px;
+
+}
+.bottom > ul{
+	position:relative;
+	height:100px;
+	top: 20px;
+	padding: 0;
+}
+.bottom-ul >li{
+	list-style: none;
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 60px;
+	text-align: center;
+	border: 1px solid skyblue;
+
+}
+.bottom-ul li > span{
+	font-size: 20px;
+	line-height: 100px;
+}
+.bottom-ul >li:first-child{
+	margin-left: 0;
+}
