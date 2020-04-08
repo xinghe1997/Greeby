@@ -1,0 +1,70 @@
+<!DCOTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>贪婪</title>
+		<link rel="stylesheet" href="../css/bootstrap.css">
+		<link rel="stylesheet" href="../css/Original.css">
+		<script src="../js/jquery-3.3.1.js"></script>
+		<script src="../js/login.js"></script>
+		<style>
+			html,body{
+				height:100%;
+				width: 100%;
+			}
+			.wall{
+				width: 100%;
+				height: 100%;
+				background-color: skyblue;
+				//background-image: url("../images/wallpaper/2.jpg");
+				//background-repeat: no-repeat;
+				//background-size: cover;
+				
+				position: relative;
+				left:0;
+				top:0;
+				
+			}
+			.wall-1{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform:translate(-50%,-50%);
+				background-color: red;
+				background-image: url("../images/wallpaper/1.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				transition: width 2s,height 2s;
+				z-index: 1;
+				
+			}
+			.wall-1:hover{
+				//opacity:0;
+				width: 0%;
+				height: 0%;
+			}
+			.wall-2{
+				width: 30%;
+				height: 30%;
+				margin: 0 auto;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform:translate(-50%,-50%);
+				background-image: url("../images/wallpaper/2.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-color: blue
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wall">
+			<div class="wall-1"></div>
+			<div class="wall-2"></div>
+		</div>
+	</body>
+</html>
