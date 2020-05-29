@@ -1,0 +1,60 @@
+html,body{
+height:100%;
+	width: 100%;
+}
+
+.wall-1{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	z-index:1;
+	background-image: url("../images/wallpaper/1.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.wall-2{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	z-index:2;
+	background-image: url("../images/wallpaper/2.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.zoom{
+	width: 0%;
+	height: 0%;
+	z-index:1;
+	transition: width 3s,height 3s,z-index 3s;
+}
+.danhua{
+	opacity: 0;
+	transition:opacity 3s;
+}
+.form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	width: 28%;
+	
+	z-index: 6;
+	
+}
+.to{
+	margin-top: 10px;
+	opacity: 0.6;
+}
+input{
+	margin-top:10px;
+	opacity: 0.6;
+	
+}
+			

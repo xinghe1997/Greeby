@@ -1,17 +1,24 @@
 body{
-	//background-color: #606060;
+	background-color: #f3f3f3;
+}
+.text-f{
+	color: #fff;
+}
+.theme{
+	transition: all 1.5s linear;
 }
 .layout{
-	width: 900px;
+	width: 800px;
 	margin:0 auto;
-	//background-color: red;
 }
 /*顶部开始*/
 .top{
 	width:100%;
 	height:50px;
-	background-color: #17a2b8;
-	position: relative;
+	background-color: #868e96;
+	overflow: hidden;
+	position: sticky;
+    top: 0;
 }
 .themo{
 	height: 50px;
@@ -20,37 +27,36 @@ body{
 	position:absolute;
 	left:0;
 	text-align:center;
-	color: #fff;
+	//color: #fff;
 }
 .themo-ul > li{
 	line-height: 50px;
 	float: left;
 	margin-left: 20px;
+	cursor: pointer;
+	
 }
-.themo-ul li:nth-child(1) > span{
-	color: skyblue;
-}
-.themo-ul li:nth-child(2) > span{
-	color: #200000;
-}
-.themo-ul li:nth-child(3) > span{
-	color: #888888;
-}
-
-
 .user{
-	color: black;
 	position:absolute;
 	top: 5px;
-	right: 20px;
+	right: 0;
+}
+.main-user-img{
+	width: 30px;
+	height:30px;
+	border-radius: 20px;
+
 }
 .user-img{
-	border-radius: 26px;
+	border-radius: 5px;
 	width: 35px;
 	height:35px;
+	margin-left:10px;
+	margin-right:10px;
 }
-.user > button{
-	margin-left: 30px;
+.btn > a{
+	text-decoration:none;color: #fff;
+	
 }
 /*顶部结束*/
 /*头部开始*/
@@ -65,51 +71,124 @@ body{
 	top: 15px;
 }
 .head-nav > a {
-	font-size: 20px;
+	font-size: 19px;
 	margin: 0 65px 0 65px;
 	text-decoration: none;
+	color:black;
 }
 /*头部结束*/
+
+
 /*内容区开始*/
-.main{
-	width: 100%;
-	height:500px;
-	
-}
 .main-body{
-	height:100%;
-	background-color: yellow;
+	height: auto;
+	margin-bottom: 10px;
+	border: 1px solid #e8e8e8;
+	background-color: #fff;
 }
 .main-body-top{
-	height: 35px;
+	height: 40px;
+	max-height:40px;
 	font-size: 12px;
+	border-bottom: 1px solid #e8e8e8;
+	padding-top: 5px;
+	padding-bottom:5px;
+	overflow: hidden;
 }
 .main-body-top ul > li:nth-child(1){
 	float: left;
 }
 .main-body-top ul > li:nth-child(2){
 	float: right;
-	line-height: 35px;
+	line-height: 28px;
+}
+.main-body-top ul > li:nth-child(1) > span{
+	margin-left: 10px;
 }
 .main-body-content{
-	width: 700px;
-	height: 300px;
+	width: 80%;
+	height: auto;
 	margin: 0 auto;
-	background-color: skyblue;
+	overflow: hidden;
+}
+.m-b-c-text{
+	text-indent: 2em;
+	font-size: 17px;
+	max-width:100%;
 	word-wrap: break-word;
+	line-height: 30px;
+	//margin-left: 40px;
 }
-.main-body-content > img{
-	width:100%;
-	height:100%;
+.m-b-c-img{
+	max-height: 800px;
 }
+.m-b-c-img > a > img{
+	width: 80%;
+	height: auto;
+	margin-top: 15px;
+	margin-bottom: 20px;
+
+}
+.m-b-b{
+	height: 25px;
+	width: 100%;
+}
+.m-b-b ul {
+	margin-left: 50px;
+}
+.m-b-b ul >li{
+	font-size: 20px;
+	float: left;
+	margin-left: 30px;
+	cursor: pointer;
+}
+
 /*内容区结束*/
-/*
-	底部开始
-*/
+/* 分页开始*/
+.page{
+width:300px;
+height:30px;
+/* background-color: red;	 */
+padding-top: 4px;
+position:relative;
+}
+.page > li:nth-child(1){
+	position:absolute;
+	left:0;
+}
+.page > li:nth-child(2){
+	position:absolute;
+	left: 50%;
+	margin-left: -24px;
+	
+}
+.page > li:nth-child(3){
+	position:absolute;
+	right: 0;
+	
+}
+
+.page > li{
+	background-color: skyblue;
+	color: #fff;
+	font-size: 16px;
+	width: 48px;
+	text-align: center;
+}
+/* .page > li:nth-child(1){ */
+	/* float: left; */
+/* } */
+/* .page > li:nth-child(2){ */
+	/* float: right; */
+/* } */
+
+/* 分页结束*/
+
+	/* 底部开始 */
 .bottom{
 	margin-top: 10px;
 	height: 140px;
-
+	//color: #fff;
 }
 .bottom > ul{
 	position:relative;
@@ -120,9 +199,11 @@ body{
 	width: 100px;
 	height: 100px;
 	float: left;
-	margin-left: 60px;
+	margin-left: 40px;
+	margin-right: 40px;
 	text-align: center;
 	transition:box-shadow .8s ease-in-out;
+	//color: $fff;
 }
 .bottom-ul >li:hover{
 	box-shadow: 10px 10px 10px #88888888;
@@ -132,9 +213,7 @@ body{
 	font-size: 20px;
 	line-height: 100px;
 }
-.bottom-ul >li:first-child{
-	margin-left: 0;
-}
+
 /*
 	底部结束
 */
