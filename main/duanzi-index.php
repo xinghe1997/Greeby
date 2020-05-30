@@ -1,3 +1,10 @@
+<?php
+	require("../php/duanzi.php");
+	$result = getPage();
+	// $total = $result->
+	 // print_r($result[1]);
+	 // echo count($result[1]);
+?>
 <!DCOTYPE html>
 <html>
 	<head>
@@ -80,9 +87,17 @@
 		<?php endwhile;?>
 		<div>
 			<ul class="layout page">
-				<?php echo $result[1];?>
-				<li>1/10</li>
-				<li>下一页</li>
+			
+				<li>
+					<?php echo $result[1]['上一页'];?>
+				</li>
+				<li>
+					<?php echo $result[1]['总数'];?>
+				</li>
+				<li>
+					<?php echo $result[1]['下一页'];?>
+				</li>
+				
 			</ul>
 		</div>
 		<div class="bottom">

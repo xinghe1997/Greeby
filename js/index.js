@@ -4,8 +4,8 @@ $(function(){
 });
 //背景变化与字体    开始
 function theMe(){
-	
 	var val = $(this).attr("value");
+	document.cookie = "color"+val;
 	if(val != "#f3f3f3"){
 		$('.top').addClass('text-f');
 		$('.head-nav > a').css('color','#fff');
@@ -16,7 +16,7 @@ function theMe(){
 		$('.bottom').removeClass('text-f');
 	
 	}
-	$('body').addClass('theMe');
+	
 	$('body').css('background-color',val);
 };
 //背景变化与字体    结束
