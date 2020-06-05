@@ -1,0 +1,27 @@
+该作品使用环境：
+python:
+	使用库:json,etree,os,time,requests,threading,mysql.connector
+php:
+	使用库：mysqli
+apache
+html
+css
+jquery:
+jquery.cookie
+javascript
+mysql
+
+
+
+运行注意事项：
+	1.mysql
+		user为root,password:123456,必须手动建立一个名为main的库,mysql拥有这些就好了
+	2.运行爬虫时注意每个爬虫下都有一个ip.json文件，该文件是爬虫代理,使用时必须更新，
+	不然会爬取失败，使用自己ip爬取容易被对方封ip.更新可下载xichi项目爬取代理，
+	详情请看该项目介绍。
+准备好这些以后该项目可正常使用。
+
+
+温馨提示：用beauty爬取小姐姐时请温柔点，爬取频露太高页数太多会给对方服务器造成压力，
+友好观图.
+	
