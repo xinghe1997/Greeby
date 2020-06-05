@@ -1,7 +1,6 @@
 <?php
-	
-	require("../php/duanzi.php");
-	$result = getPage();
+require("../php/beauty.php");
+$arr = getBeautyUrl();
 ?>
 <!DCOTYPE html>
 <html>
@@ -41,15 +40,15 @@
 		<div class="head">
 			<div class="layout">
 				<nav class="head-nav" id="head-nav">
-					<a href="#"><span>搞笑段子</span></a>
+					<a href="duanzi-index.php"><span>搞笑段子</span></a>
 					<a href="#"><span>搞笑图片</span></a>
-					<a href="beauty-index.php"><span>美女图片</span></a>
+					<a href="#"><span>美女图片</span></a>
 					<a href="#"><span>壁纸</span></a>
 				</nav>
 			</div>
 		</div>
-		<?php if($result):?>
-		<?php while($row = $result[0]->fetch_assoc()):?>
+		<?php if($arr):?>
+		<?php foreach($arr[0] as $val):?>
 		<div>
 			<div class="layout">
 				<div class="main-body">
@@ -65,10 +64,8 @@
 						</ul>
 					</div>
 					<div class="main-body-content">
-						<div class="m-b-c-text">
-							<p>
-								<?php echo $row['content']?>
-							</p>
+						<div class="m-b-c-img">
+							<a><img src="<?php echo $val?>"/></a>
 						</div>
 					</div>
 					<div class="m-b-b">
@@ -90,9 +87,9 @@
 			</div>
 			</div>
 		</div>
-		<?php endwhile;?>
+		<?php endforeach?>
 		<?php else:?>
-		<div>
+			<div>
 			<div class="layout">
 				<div class="main-body">
 					<div class="main-body-top">
@@ -112,6 +109,9 @@
 								<?php echo "<span style='color:red ;'>这里什么都没有,数据获取失败</span>"?>
 							</p>
 						</div>
+						<div class="m-b-c-img">
+							<a><img src="../images/userimg/link.jpg"/></a>
+						</div>
 					</div>
 					<div class="m-b-b">
 						<ul>
@@ -132,24 +132,24 @@
 			</div>
 			</div>
 		</div>
-		<?php endif?>	
+		<?php endif?>
 		<div>
 			<ul class="layout page" id="aclick">
 			
 				<li>
-					<?php echo $result[1]['上一页'];?>
+					<?php echo $arr[1]['upPage'];?>
 				</li>
 				<li>
-					<?php echo $result[1]['总数'];?>
+					<?php echo $arr[1]['paging'];?>
 				</li>
 				<li>
-					<?php echo $result[1]['下一页'];?>
+					<?php echo $arr[1]['downPage'];?>
 				</li>
 				
 			</ul>
 		</div>
 		<div class="bottom">
-				 <ul class="layout bottom-ul">
+				  <ul class="layout bottom-ul">
 					<li>
 						<span>也</span>
 					</li>

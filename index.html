@@ -6,8 +6,15 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/Original.css">
 		<link rel="stylesheet" href="css/index.css">
-		<script src="js/jquery-3.3.1.js"></script>
+		<script src="js/package/jquery-3.3.1.js"></script>
+		<script src="js/package/jquery.cookie.js"></script>
 		<script src="js/index.js"></script>
+		<script>
+			$(function(){
+				readyHtml();
+			});
+			
+		</script>
 	</head>
 	<body>	
 		<div class="top">
@@ -27,10 +34,10 @@
 		</div>
 		<div class="head">
 			<div class="layout">
-				<nav class="head-nav">
+				<nav class="head-nav" id="head-nav">
 					<a href="main/duanzi-index.php"><span>搞笑段子</span></a>
 					<a href="#"><span>搞笑图片</span></a>
-					<a href="#"><span>美女图片</span></a>
+					<a href="main/beauty-index.php"><span>美女图片</span></a>
 					<a href="#"><span>壁纸</span></a>
 				</nav>
 			</div>
@@ -55,7 +62,7 @@
 						</div>
 						
 						<div class="m-b-c-img">
-							<a><img src="images/greedyimg/link2.jpg"/></a>
+							<a><img src="D:\代码\www\15904676275619.jpg"/></a>
 						</div>
 						
 					</div>
@@ -197,24 +204,25 @@
 			</div>
 		</div>
 		<div class="bottom">
-				 <ul class="bottom-ul">
+				 <ul class="layout bottom-ul">
 					<li>
-						<span>没</span>
+						<span>也</span>
 					</li>
 					<li>
-						<span>想</span>
+						<span>不</span>
 					</li>
 					<li>
-						<span>好</span>
+						<span>懂</span>
 					</li>
 					<li>
 						<span>放</span>
 					</li>
 					<li>
-						<span>什</span>
+						<span>啥</span>
 					</li>
+					
 					<li>
-						<span>么</span>
+						<span>！</span>
 					</li>
 				 </ul>
 		</div>

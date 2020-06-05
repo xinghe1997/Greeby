@@ -8,6 +8,7 @@ from threading import Thread,currentThread,enumerate,activeCount
 import time
 #读取ip
 def getProxys():
+  
     #打开代理文件
     f = open("ip.json",'r')
     #读取

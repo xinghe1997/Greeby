@@ -1,6 +1,5 @@
 <?php
 #要执行多页查询，如果没有传值赋值第一页
-
 function getHtml($con,$total,$pageNum){
 	$num = $pageNum;
 	$sql = "select count(*) from `duanzi`";
@@ -12,18 +11,18 @@ function getHtml($con,$total,$pageNum){
 	$arrHtml = array('上一页'=>'1','总数'=>2,'下一页'=>3);
 	// var_dump($pageNum);
 	$pageNum--;
-	if($pageNum <= 1){
-		$arrHtml['上一页'] = "<a href='javascript:void(0)'>上一页</a>";
+	if($pageNum < 1){
+		$arrHtml['上一页'] = "<a href='javascript:void(0)' style='text-decoration: none' id='upPage'>上一页</a>";
 	}else{
-		$arrHtml['上一页'] = "<a href='http://lixisong.com/%e8%b4%aa%e5%a9%aa/main/duanzi-index.php?page={$pageNum}'>上一页</a>";
+		$arrHtml['上一页'] = "<a href='http://lixisong.com/Greeby/main/duanzi-index.php?page={$pageNum}' style='text-decoration: none' id='upPage'>上一页</a>";
 	}
 	$arrHtml['总数'] = ($pageNum+1).'/'.$maxPage;
 	#判断是不是最大页
 	if($pageNum == ($maxPage-1)){
-		$arrHtml['下一页'] = "<a href='javascript:void(0)'>下一页</a>";
+		$arrHtml['下一页'] = "<a href='javascript:void(0)' id='lowPage'>下一页</a>";
 	}else{
 		$pageNum+=2;
-		$arrHtml['下一页'] = "<a href='http://lixisong.com/%e8%b4%aa%e5%a9%aa/main/duanzi-index.php?page={$pageNum}'>下一页</a>";
+		$arrHtml['下一页'] = "<a href='http://lixisong.com/Greeby/main/duanzi-index.php?page={$pageNum}' id='lowPage'>下一页</a>";
 	}
 	return $arrHtml;
 }
